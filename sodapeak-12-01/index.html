@@ -7,7 +7,7 @@
 <meta name="description" content="See SodaPeak bottle packages, check ingredient information and compare purchase and refund terms before ordering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
   <!-- Meta Pixel Code -->
 <script>
@@ -85,195 +85,124 @@ src="https://www.facebook.com/tr?id=2291920821555055&ev=PageView&noscript=1"
 
   
 <style>
-:root{
-  --ink:#293638; --ink-soft:#526566; --paper:#FDFDFB; --fog:#EDF3EF; --rule:#CDDCD3;
-  --teal:#345C4D; --amber:#DBE7C7; --amber-dark:#B7CCA0; --on-amber:#293638; --star:#4C6945;
-  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
-  color-scheme: light; box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+:root {
+  color-scheme: dark;
+  --background: #15161a;
+  --panel: #1d1e23;
+  --card: #24252b;
+  --line: #41424a;
+  --text: #faf8f5;
+  --muted: #c9c7cb;
+  --red: #bd382c;
+  --red-hover: #9f2c22;
+  --accent: #ff8f7c;
+  --headline: "Barlow Condensed", Impact, "Arial Narrow", sans-serif;
+  --body: Inter, system-ui, sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--ink:#EBF4EC;--ink-soft:#B8CCBD;--paper:#182720;--fog:#25372E;--rule:#40564A;--teal:#BCD9BC;color-scheme:dark}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { margin: 0; background: var(--background); color: var(--text); font: 1rem/1.65 var(--body); }
+p { margin: 0 0 1rem; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, .brand, .btn, .fact-strip strong, .ingredient-grid dt {
+  font-family: var(--headline); font-weight: 800; line-height: 1.02; text-transform: uppercase;
 }
-:root[data-theme="dark"]{--ink:#EBF4EC;--ink-soft:#B8CCBD;--paper:#182720;--fog:#25372E;--rule:#40564A;--teal:#BCD9BC;color-scheme:dark}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.1875rem;line-height:1.7;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto}
-a{color:var(--teal)}
-:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-
-.disclosure{background:var(--fog);color:var(--ink-soft);font-family:var(--sans);font-size:.8rem;text-align:center;padding:.5rem 1rem}
-.masthead{border-bottom:1px solid var(--rule);padding:1.1rem 1.25rem}
-.masthead-inner{max-width:44rem;margin:0 auto;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
-.brand{font-family:var(--sans);font-weight:800;font-size:1.25rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
-.section-name{font-family:var(--sans);font-size:.875rem;color:var(--ink-soft)}
-
-main{max-width:44rem;margin:0 auto;padding:0 1.25rem}
-.headline{font-family:var(--sans);font-weight:800;font-size:clamp(2rem,5.4vw,3.1rem);line-height:1.08;letter-spacing:-.025em;margin:2.5rem 0 1rem}
-.dek{font-size:1.3rem;line-height:1.5;color:var(--ink-soft);margin:0 0 1.5rem}
-.byline{font-family:var(--sans);font-size:.9rem;color:var(--ink-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.75rem 0;margin-bottom:2rem}
-.byline strong{color:var(--ink)}
-h2{font-family:var(--sans);font-weight:800;font-size:1.6rem;line-height:1.2;letter-spacing:-.015em;margin:3rem 0 1rem}
-p{margin:0 0 1.25rem}
-.lead::first-letter{font-family:var(--sans);font-weight:800;float:left;font-size:4.2rem;line-height:.85;padding:.35rem .6rem 0 0;color:var(--teal)}
-.pull{font-size:1.6rem;line-height:1.35;font-style:italic;border-left:4px solid var(--teal);padding:.25rem 0 .25rem 1.25rem;margin:2.25rem 0}
-
-/* Identificação */
-.mirror{border:2px solid var(--ink);border-radius:8px;padding:1.5rem 1.5rem 1rem;margin:2rem 0}
-.mirror h3{font-family:var(--sans);margin:0 0 1rem;font-size:1.2rem}
-.mirror ul{list-style:none;padding:0;margin:0 0 1rem}
-.mirror li{position:relative;padding:.45rem 0 .45rem 2.1rem;border-bottom:1px solid var(--rule)}
-.mirror li:last-child{border-bottom:0}
-.mirror li::before{content:"";position:absolute;left:0;top:.75rem;width:1.15rem;height:1.15rem;border:2px solid var(--teal);border-radius:3px}
-.mirror li::after{content:"✓";position:absolute;left:.2rem;top:.42rem;color:var(--teal);font-family:var(--sans);font-weight:800}
-.mirror .verdict{font-family:var(--sans);font-size:1rem;font-weight:700}
-
-.doctor-note{background:var(--fog);border-radius:6px;padding:1.5rem 1.5rem .5rem;margin:2rem 0}
-.doctor-note h3{font-family:var(--sans);font-size:1rem;margin:0 0 .75rem}
-
-.thieves{margin:1.5rem 0 2rem;padding:0;list-style:none;counter-reset:t}
-.thieves li{counter-increment:t;position:relative;padding-left:3rem;margin-bottom:1.25rem}
-.thieves li::before{content:counter(t);position:absolute;left:0;top:.1rem;width:2rem;height:2rem;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--sans);font-weight:700;font-size:1rem;display:grid;place-items:center}
-.thieves strong{font-family:var(--sans)}
-
-/* Ingredientes */
-.ingredients{display:grid;grid-template-columns:1fr;gap:0;margin:1.5rem 0 2rem;border-top:3px solid var(--ink)}
-@media (min-width:640px){.ingredients{grid-template-columns:1fr 1fr;column-gap:2rem}}
-.ing{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
-.ing h3{font-family:var(--sans);font-size:1.1rem;margin:0 0 .15rem}
-.ing .origin{font-family:var(--sans);font-size:.8rem;color:var(--teal);font-weight:700;margin-bottom:.4rem}
-.ing p{margin:0;font-size:1.02rem;line-height:1.6}
-.made{font-family:var(--sans);font-size:.9rem;color:var(--ink-soft)}
-
-.timeline{border-left:2px solid var(--rule);margin:1.5rem 0 2rem;padding-left:1.5rem}
-.timeline div{margin-bottom:1.25rem}
-.timeline b{font-family:var(--sans);display:block;font-size:.95rem;color:var(--teal)}
-
-/* Pitches */
-.pitch{background:var(--fog);border-radius:10px;padding:2rem 1.5rem 1.75rem;margin:3rem 0}
-.pitch h2{margin-top:0}
-.pitch .reasons{list-style:none;padding:0;margin:0 0 1.5rem}
-.pitch .reasons li{position:relative;padding:.35rem 0 .35rem 1.6rem}
-.pitch .reasons li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-family:var(--sans);font-weight:800}
-.reviews{display:grid;gap:1rem;margin:0 0 1.75rem}
-.review{background:var(--paper);border-radius:8px;padding:1.15rem 1.25rem;border-left:4px solid var(--amber)}
-.review .stars{color:var(--star);letter-spacing:.1em;font-size:1rem;line-height:1}
-.review p{margin:.5rem 0 .6rem;font-size:1.05rem;font-style:italic;line-height:1.55}
-.review .who{font-family:var(--sans);font-size:.85rem;font-weight:700}
-.review .who span{font-weight:500;color:var(--ink-soft)}
-.anchor{font-family:var(--sans);text-align:center;margin:0 0 1.25rem}
-.anchor .was{color:var(--ink-soft)}
-.anchor .was s{color:#B04848}
-.anchor .now{display:block;font-size:2.2rem;font-weight:800;letter-spacing:-.02em;color:var(--teal);line-height:1.2}
-.anchor .note{font-size:.9rem;color:var(--ink-soft)}
-
-.cta{text-align:center}
-.btn{display:inline-block;background:var(--amber);color:var(--on-amber);font-family:var(--sans);font-weight:800;font-size:1.15rem;text-decoration:none;padding:1.05rem 1.75rem;border-radius:6px;box-shadow:0 3px 0 var(--amber-dark);transition:transform .08s;max-width:100%}
-.btn:hover{transform:translateY(-1px)}
-.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--amber-dark)}
-.btn small{display:block;font-weight:500;font-size:.8rem;margin-top:.15rem}
-.cta .trust{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);margin:.85rem 0 0}
-
-.compare-wrap{overflow-x:auto}
-.compare{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.95rem;margin:1rem 0 1.5rem;background:var(--paper);border-radius:6px}
-.compare th,.compare td{text-align:left;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
-.compare td:last-child{text-align:right;white-space:nowrap}
-.compare tr:last-child td{font-weight:800;color:var(--teal);border-bottom:0}
-
-.guarantee{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:start;border:2px solid var(--teal);border-radius:8px;padding:1.5rem;margin:1.5rem 0;background:var(--paper)}
-.seal{width:5.5rem;height:5.5rem;border-radius:50%;background:var(--teal);color:var(--paper);display:grid;place-items:center;text-align:center;font-family:var(--sans);font-weight:800;line-height:1.05;font-size:.85rem}
-.seal b{font-size:1.6rem;display:block}
-.guarantee h3{font-family:var(--sans);margin:0 0 .5rem;font-size:1.2rem}
-.guarantee p{margin:0;font-size:1.05rem}
-@media (max-width:480px){.guarantee{grid-template-columns:1fr;text-align:center}.seal{margin:0 auto}}
-
-.faq details{border-bottom:1px solid var(--rule);padding:1rem 0}
-.faq summary{font-family:var(--sans);font-weight:700;font-size:1.05rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--teal)}
-.faq details[open] summary::after{content:"−"}
-.faq details p{margin:.75rem 0 0;font-size:1.05rem}
-
-.two-paths{background:var(--fog);border-radius:8px;padding:1.5rem 1.5rem .5rem;margin:2rem 0}
-
-footer{border-top:1px solid var(--rule);margin-top:4rem;padding:2rem 1.25rem 6rem;font-family:var(--sans);font-size:.8rem;line-height:1.55;color:var(--ink-soft)}
-footer .inner{max-width:44rem;margin:0 auto}
-footer p{margin:0 0 1rem}
-footer nav a{margin-right:1rem}
-
-.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--rule);padding:.65rem 1rem calc(.65rem + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;transform:translateY(110%);transition:transform .25s;z-index:20}
-.sticky.show{transform:none}
-.sticky .btn{font-size:1rem;padding:.8rem 1.4rem;width:100%;max-width:26rem;text-align:center}
-@media (prefers-reduced-motion: reduce){.sticky{transition:none}}
-</style>
-<style>
-  :root { --paper: #fff; --fog: #f1f5f3; --ink: #203631; --ink-soft: #465c56; --rule: #d4e0da; --teal: #285d4f; --amber: #cfe6da; --amber-dark: #aecfbd; --on-amber: #173c30; }
-  main, .masthead-inner, footer .inner { max-width: 64rem; }
-  main { padding-bottom: 2rem; }
-  .product-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 5vw, 4rem); padding-block: clamp(2.5rem, 7vw, 5rem); }
-  .product-hero .headline { margin-top: .45rem; }
-  .product-type { font: 700 .83rem/1.4 var(--sans); color: var(--teal); margin-bottom: .55rem; }
-  .product-photo { margin: 0; background: var(--fog); border: 1px solid var(--rule); border-radius: 14px; padding: clamp(1rem, 4vw, 2rem); }
-  .product-photo img { width: 100%; height: auto; max-height: 23rem; object-fit: contain; display: block; }
-  .product-photo figcaption, .affiliate-note { font: 500 .85rem/1.5 var(--sans); color: var(--ink-soft); }
-  .product-photo figcaption { text-align: center; margin-top: .75rem; }
-  .affiliate-note { margin: .7rem 0 0; }
-  .package-grid { list-style: none; margin: 1.25rem 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-  .package-grid li { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem; font: 800 1.15rem/1.3 var(--sans); }
-  .offer-cta { text-align: center; margin-top: 1.5rem; }
-  @media (max-width: 620px) { .product-hero, .package-grid { grid-template-columns: 1fr; } }
-</style>
-<style>
-  .masthead nav { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; }
-  .sales-section { margin-block: clamp(2rem, 5vw, 4rem); }
-  .sales-section h2 { margin-top: 0; }
-  .sales-section h3 { font-family: var(--sans); font-size: 1.05rem; line-height: 1.35; margin: 0 0 .35rem; }
-  .product-hero .dek { max-width: 34ch; }
-  .product-photo img { aspect-ratio: 1; }
-  .sales-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-  .sales-card { background: var(--paper); padding: 1.15rem; border: 1px solid var(--rule); border-radius: 10px; }
-  .sales-card p { margin: 0; }
-  .sales-card img { width: 100%; height: 9.5rem; object-fit: contain; display: block; margin-bottom: 1rem; }
-  .ingredient-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .85rem; margin: 1.15rem 0 0; }
-  .ingredient-grid dt { font: 800 1rem/1.4 var(--sans); }
-  .ingredient-grid dd { margin: .25rem 0 0; color: var(--ink-soft); font-size: .95rem; }
-  .package-description { font-weight: 700; margin-bottom: .3rem !important; }
-  .step-list { padding-left: 1.4rem; }
-  .step-list li { padding-left: .25rem; margin-bottom: .6rem; }
-  .offer-cta { margin-top: 1.5rem; }
-  .sales-close { padding: clamp(1.25rem, 5vw, 2.5rem); background: var(--fog); border-radius: 12px; text-align: center; }
-  .sales-close h2 { margin-bottom: .65rem; }
-  @media (max-width: 640px) { .sales-grid { grid-template-columns: 1fr; } }
+h2 { margin: 0 0 1rem; font-size: clamp(2.35rem, 5.6vw, 4.15rem); }
+h3 { margin: 0 0 .45rem; font-size: 1.6rem; }
+.disclosure { text-align: center; padding: .38rem 1rem; color: var(--muted); background: #202126; font-size: .75rem; }
+.masthead { position: sticky; z-index: 5; top: 0; background: var(--background); border-bottom: 1px solid var(--line); }
+.masthead-inner, main, footer .inner { width: min(100% - 2rem, 70rem); margin-inline: auto; }
+.masthead-inner { display: flex; gap: 1rem; justify-content: space-between; align-items: center; min-height: 4rem; }
+.brand { color: var(--text); font-size: 1.8rem; text-decoration: none; }
+.brand span { color: var(--accent); }
+.masthead nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.25rem; }
+.section-name { color: var(--muted); text-decoration: none; font-size: .9rem; }
+.section-name:hover { color: var(--text); }
+.btn { display: inline-block; padding: .95rem 1.3rem; border-radius: 6px; text-decoration: none; background: var(--red); color: #fff; font-size: 1.25rem; text-align: center; }
+.btn:hover { background: var(--red-hover); }
+.masthead .btn { font-size: 1.03rem; padding: .65rem .95rem; white-space: nowrap; }
+.product-hero { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: clamp(1.5rem, 6vw, 5rem); padding-block: clamp(2.75rem, 8vw, 6.2rem); }
+.headline { margin: 0 0 1.1rem; font-size: clamp(4rem, 9.6vw, 8.5rem); letter-spacing: -.025em; }
+.headline span { display: block; color: var(--accent); font-size: .43em; letter-spacing: 0; }
+.product-type { margin-bottom: .55rem; color: var(--accent); font-weight: 700; font-size: .85rem; }
+.dek { color: var(--muted); max-width: 43ch; font-size: clamp(1rem, 2vw, 1.17rem); }
+.hero-detail, .affiliate-note, figcaption { margin: .75rem 0 0; font-size: .85rem; color: var(--muted); }
+.product-photo { position: relative; isolation: isolate; margin: 0; text-align: center; }
+.product-photo::before { content: ""; position: absolute; inset: 13% 0 9%; aspect-ratio: 1; max-width: 93%; margin: auto; border-radius: 50%; background: radial-gradient(circle at 55% 35%, #d7523f, #8f281e); z-index: -1; }
+.product-photo img { width: 100%; max-height: 29rem; aspect-ratio: 1; object-fit: contain; }
+.fact-strip { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--panel); border-block: 1px solid var(--line); }
+.fact-strip li { padding: 1.15rem; text-align: center; color: var(--muted); }
+.fact-strip li + li { border-left: 1px solid var(--line); }
+.fact-strip strong { color: var(--text); display: block; font-size: 1.5rem; margin-bottom: .25rem; }
+.sales-section { padding-block: clamp(2.3rem, 6vw, 4.2rem); border-bottom: 1px solid var(--line); }
+.sales-section > p, .sales-close > p { color: var(--muted); max-width: 72ch; }
+.sales-grid, .ingredient-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.3rem 0 0; }
+.ingredient-grid { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); }
+.sales-card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem; }
+.sales-card p, .sales-card dd { margin: 0; color: var(--muted); font-size: .94rem; }
+.sales-card dt { font-size: 1.3rem; margin-bottom: .35rem; }
+.sales-card img { width: 100%; aspect-ratio: 1.4; object-fit: contain; background: #eee9e4; border-radius: 6px; margin-bottom: 1rem; }
+.sales-card .package-description { color: var(--accent); font-weight: 700; margin-bottom: .3rem; }
+.step-list { padding: 0; list-style: none; counter-reset: step; }
+.step-list li { counter-increment: step; }
+.step-list li::before { content: counter(step, decimal-leading-zero); display: block; color: var(--accent); font: 800 2.25rem/1 var(--headline); margin-bottom: .65rem; }
+.offer-cta { margin-top: 1.5rem; text-align: center; }
+.guarantee-panel { padding: clamp(1.25rem, 4vw, 2rem); background: var(--panel); border-left: 4px solid var(--red); border-radius: 6px; }
+.guarantee-panel p:last-child { margin-bottom: 0; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; font-weight: 700; padding: .85rem .25rem; }
+.faq details p { color: var(--muted); padding-inline: .25rem; }
+.sales-close { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: clamp(1.5rem, 5vw, 3rem); text-align: center; margin-block: 2rem; }
+.sales-close > p { margin-inline: auto; }
+footer { background: var(--panel); border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding: 1.5rem 0 5rem; }
+footer p { margin: 0; }
+.sticky { position: fixed; z-index: 6; inset: auto 0 0; padding: .5rem 1rem calc(.5rem + env(safe-area-inset-bottom)); background: var(--background); border-top: 1px solid var(--line); text-align: center; visibility: hidden; transform: translateY(105%); transition: transform .2s; }
+.sticky.show { visibility: visible; transform: translateY(0); }
+@media (max-width: 680px) {
+  .masthead nav { display: none; }
+  .product-hero, .sales-grid { grid-template-columns: 1fr; }
+  .product-photo { max-width: 27rem; margin-inline: auto; }
+  .fact-strip li { padding: .75rem .4rem; font-size: .77rem; }
+  .fact-strip strong { font-size: 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .sticky { transition: none; } }
 </style>
 </head>
 <body>
 <div class="disclosure">Affiliate page · We may earn a commission from purchases through this page.</div>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="brand" href="#product">SodaPeak</a>
+    <a class="brand" href="#product" aria-label="SodaPeak">Soda<span>Peak</span></a>
     <nav aria-label="Product sections">
       <a class="section-name" href="#ingredients">Ingredients</a>
       <a class="section-name" href="#packages">Packages</a>
+      <a class="section-name" href="#guarantee">Guarantee</a>
       <a class="section-name" href="#faq">FAQ</a>
     </nav>
+    <a class="btn" href="#packages">See packages</a>
   </div>
 </header>
 <main id="product">
   <section class="product-hero" aria-labelledby="product-title">
     <div>
-      <p class="product-type">Gummy dietary supplement</p>
-      <h1 class="headline" id="product-title">SodaPeak</h1>
+      <h1 class="headline" id="product-title">SodaPeak<span>Gummy supplement</span></h1>
       <p class="dek">Compare bottle packages, review the ingredients and check the seller’s guarantee before choosing an order.</p>
-      <a class="btn" href="#packages">Compare packages</a>
+      <a class="btn" href="#packages">Choose your package</a>
+      <p class="hero-detail">2, 3 or 6 bottles. Seller’s advertised 60-day guarantee. Terms apply.</p>
     </div>
     <figure class="product-photo">
       <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-2-frascos.png" alt="Two SodaPeak bottles shown in the seller’s product photo" fetchpriority="high">
       <figcaption>SodaPeak two-bottle package. Image from the seller.</figcaption>
     </figure>
   </section>
+
+  <ul class="fact-strip" aria-label="Product and offer overview">
+    <li><strong>Gummy format</strong>Dietary supplement</li>
+    <li><strong>2, 3 or 6</strong>Bottles per package</li>
+    <li><strong>60 days</strong>Seller’s advertised guarantee</li>
+  </ul>
 
   <section class="sales-section" aria-labelledby="why-title">
     <h2 id="why-title">Why consider SodaPeak?</h2>
@@ -299,12 +228,11 @@ footer nav a{margin-right:1rem}
   </section>
 
   <section class="sales-section" aria-labelledby="use-title">
-    <h2 id="use-title">How SodaPeak is used</h2>
-    <p>The seller describes SodaPeak as a gummy dietary supplement taken by mouth. Check the product label for the serving size, directions and warnings.</p>
-    <ol class="step-list">
-      <li>Review the complete Supplement Facts panel, including amounts per serving.</li>
-      <li>Ask a qualified health professional about suitability if you have questions about a health condition or medicines you take.</li>
-      <li>Follow the directions on the label supplied with your order.</li>
+    <h2 id="use-title">How it works</h2>
+    <ol class="step-list sales-grid">
+      <li class="sales-card"><h3>Compare packages</h3><p>Choose among 2, 3 and 6 bottles after checking the total order cost and shipping terms.</p></li>
+      <li class="sales-card"><h3>Order with the seller</h3><p>Confirm the quantity, price and return conditions on the seller’s package selection page.</p></li>
+      <li class="sales-card"><h3>Read the label</h3><p>Follow the serving directions and warnings on the product received. Ask a qualified health professional about individual suitability.</p></li>
     </ol>
   </section>
 
@@ -337,9 +265,11 @@ footer nav a{margin-right:1rem}
   </section>
 
   <section class="sales-section" id="guarantee" aria-labelledby="guarantee-title">
-    <h2 id="guarantee-title">Seller’s 60-day guarantee</h2>
+    <div class="guarantee-panel">
+      <h2 id="guarantee-title">Seller’s 60-day guarantee</h2>
     <p>The seller’s public offer advertises a 60-day refund guarantee and directs customers to contact support after at least 30 days of use. Check the terms that apply to your order, including the claim deadline, eligibility and return instructions.</p>
     <p><a href="https://yourorderwasconfirmed.com/returns/">Read the seller’s return policy</a></p>
+    </div>
   </section>
 
   <section class="faq sales-section" id="faq" aria-labelledby="order-title">
@@ -353,7 +283,7 @@ footer nav a{margin-right:1rem}
   </section>
 
   <section class="sales-close" aria-labelledby="close-title">
-    <h2 id="close-title">Ready to compare the current offer?</h2>
+    <h2 id="close-title">Choose your SodaPeak package</h2>
     <p>Review package availability, pricing and the full terms with the seller.</p>
     <a class="btn cta-out" href="https://sodapeak.com/spk-aff-buy-dtc/?aff_id=1858" rel="sponsored" aria-describedby="affiliate-bottom">See the current SodaPeak offer</a>
     <p class="affiliate-note" id="affiliate-bottom">Affiliate link to sodapeak.com. We may earn a commission from purchases.</p>
