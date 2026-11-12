@@ -1,0 +1,639 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+    <script type="text/javascript" async="" src="js/array.js"></script><script>
+        (function() {
+            var vtid = "v2";
+            var url = new URL(window.location.href);
+            if (!url.searchParams.get('vtid')) {
+                url.searchParams.set('vtid', vtid);
+                window.history.replaceState({}, '', url.toString());
+            }
+            var trackingValue = url.searchParams.get('vtid');
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.pricing_btn[href]').forEach(function(el) {
+                    try {
+                        var btnUrl = new URL(el.getAttribute('href'));
+                        if (!btnUrl.searchParams.get('vtid')) {
+                            btnUrl.searchParams.set('vtid', trackingValue);
+                            el.setAttribute('href', btnUrl.toString());
+                        }
+                    } catch(e) {}
+                });
+            });
+        })();
+    </script>
+    <title>Special</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noimageindex, nofollow, nosnippet">
+    <meta name="description" content="Special">
+  <link rel="icon" href="images/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_1wB6MIuMDwIr9klVEEw10ZXM7nhGIdne5D17jggnIvL', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2025-05-24',
+        person_profiles: 'identified_only',
+    })
+</script>
+
+
+<script>
+	window.clickbank = {
+		vendor: "phytomem"
+	}
+</script>
+<script src="js/hop.min.js" defer=""></script><style>
+  .sec_pricing::after{
+    display:none!important;
+  }
+</style>
+</head>
+<body id="video__body">
+    <section id="headline-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-2">
+                    <h1 id="headline" class="text-center d-md-block d-none f_LibreBaskerville"><b>Boost Your Memory <br class="d-md-none d-block"><span class="txt_orange">By 75%</span> <br class="d-md-block d-none">Just By Stopping This Kitchen Mistake<br></b></h1>
+                    <h4 id="headline-mobile" class="text-center d-md-none d-block f_LibreBaskerville"><b>Boost Your Memory <span class="txt_orange">By 75%</span><br class="d-md-none d-block">Just By Stopping This Kitchen Mistake</b></h4>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-bg" style="padding:0 0!important" id="banner-bg">
+        <div class="container"> 
+            <div class="load-holder" id="load-holder">
+                <p class="text-center" style="color:#ffffff">Please allow up to 5 seconds for the video to load</p>
+            </div>
+            <div class="video-holder row" id="player-holder" style="position: relative;">
+                <div class="col embed-responsive embed-responsive-16by9" id="player-wrapper">
+                    <div id="glass"></div>
+                    <div id="player"></div>
+                    <div id="playpause"><img class="img-fluid mx-auto d-block" id="tapContinue" src="images/tap-continue.svg"></div>
+                    <a class="soundButton" id="unmute" onclick="toggleMute()"><img id="tapSound" class="img-fluid mx-auto d-block" src="images/tap-sound.svg"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="action-area">
+        <div class="py-2 mt-5" id="action-area-spacing" style="background-color: #314574;"></div>
+
+        <div class="container-fluid bg_blue_gradient">
+            <h1 class="text-center py-3 text-light" style="margin-bottom: -2px; line-height: 1.4;">Claim your discounted package below while stocks last<br><span class="big text-warning" id="time">30:00</span></h1>
+        </div>
+        <div class="timer__bg p-4" style="clip-path: polygon(100% 0, 0 0, 50% 100%);max-width:800px;margin:0 auto; background-color:#0F172A!important"></div>
+        
+        <div class="py-2"></div>
+
+        
+  <section class="py-5 mb-3 sec_pricing position-relative">
+    <div id="nav-4" class="branding_p_nav"></div>
+    <div class="container-lg px-4 pt-md-4 pt-3">
+      <div class="pricing_table d_900_flex">
+        <div class="basic_pack">
+          <div class="border border_c_blue rounded-5 text-center oveflow-hidden">
+            <div class="px-3 w-100 border-bottom border_c_blue py-3 header">
+              <h3 class="text-white mb-0 fw-bold f_LibreBaskerville">STARTER</h3>
+            </div>
+            <div class="w-100 pt-3" style="background-color: #f8f6f1;">
+              <p class="txt_blue mb-0 text-uppercase">2 Bottles</p>
+              <img class="product_img1 mb-5" src="images/starter-product.png" alt="">
+              <div class="d-flex align-items-center justify-content-center gap-2">
+                <h4 class="text-secondary opacity-50 fw-normal mb-0 text-decoration-line-through">$99</h4>
+                <h2 class="txt_green fw_800 mb-0 h1">$79</h2>
+                <p class="txt_green text-start mb-0 lh-base">per <br>
+                  bottle</p>
+              </div>
+              <p class="mb-0 opacity-0">+3 FREE EBOOKS </p>
+              <hr class="opacity-100 border_c_blue border-1 mb-0">
+            </div>
+            <div class="px-3 py-3" style="background-color: #f8f6f1;">
+              <h3 class="mb-2 txt_blue2 fw-semibold">Total: $158</h3>
+                <a href="https://phytomem.pay.clickbank.net/?cbitems=1&amp;template=ac1nn&amp;exitoffer=ext1&amp;cbfid=63626&amp;vtid=v2&amp;vtid=v2&amp;item=1" class="pricing_btn pricing_btn_primary mb-3 fs_18"><img width="30" class="me-2" src="images/cart.svg" alt=""> Buy Now</a>
+                <img class="img-fluid" src="images/payment-methods.png" alt="">
+                <h6 class="lh-base mt-3 mb-0 txt_blue2">
+                  &nbsp;+ small shipping fee
+                </h6>
+                <p class="mb-0 txt_blue opacity-50 fw-bold">Savings: $40</p>
+            </div>
+          </div>
+        </div>
+        <div class="gold_pack">
+          <div class="border border_c_blue rounded-5 text-center oveflow-hidden">
+            <div class="px-3 w-100 border-bottom border_c_blue bg_blue_light header py-3">
+              <h3 class="mb-0 fw-bold text-white f_LibreBaskerville">ULTIMATE</h3>
+            </div>
+            <div class="w-100 pt-3" style="background-color: #f8f6f1;">
+              <p class="txt_blue mb-2 text-uppercase">6 Bottles</p>
+              <img class="product_img1 mb-4" src="images/ultimate-product.png" alt="">
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                <h4 class="text-secondary opacity-50 fw-normal mb-0 text-decoration-line-through">$99</h4>
+                <h2 class="txt_green fw_800 mb-0 h1">$49</h2>
+                <p class="txt_green text-start mb-0 lh-base">per <br>
+                  bottle</p>
+              </div>
+              <p class="mb-0 text-center txt_blue2 fw-semibold">+3 FREE EBOOKS </p>
+              <hr class="opacity-100 border_c_blue border-1 mb-0">
+            </div>
+            <div class="px-3 pt-4 pb-3 bg_blue_gradient">
+              <h3 class="mb-2 text-white fw-semibold">Total: $294</h3>
+                <a href="https://phytomem.pay.clickbank.net/?cbitems=3&amp;template=ac3nn&amp;exitoffer=ext1&amp;cbfid=63628&amp;vtid=v2&amp;vtid=v2&amp;item=3" class="pricing_btn pricing_btn_primary pricing_btn_yellow mb-3 fs_18"><img width="30" class="me-2" src="images/cart.svg" alt=""> Buy Now</a>
+                <img class="img-fluid" src="images/payment-methods.png" alt="">
+                <h6 class="lh-base mt-3 mb-0 text-white">
+                  + Free US Shipping
+                </h6>
+                <p class="mb-0 txt_blue4 fw-semibold">Savings: $434</p>
+            </div>
+          </div>
+        </div>
+        <div class="silver_pack">
+          <div class="border border_c_blue rounded-5 text-center oveflow-hidden">
+            <div class="px-3 w-100 border-bottom border_c_blue header py-3">
+              <h3 class="text-white mb-0 fw-bold f_LibreBaskerville">ADVANCED</h3>
+            </div>
+            <div class="w-100 pt-3" style="background-color: #f8f6f1;">
+              <p class="txt_blue mb-0 text-uppercase">3 Bottles</p>
+                <img class="product_img1 mb-3" src="images/advanced-product.png" alt="">
+              <div class="d-flex align-items-center justify-content-center gap-2">
+                <h4 class="text-secondary opacity-50 fw-normal mb-0 text-decoration-line-through">$99</h4>
+                <h2 class="txt_green fw_800 mb-0 h1">$69</h2>
+                <p class="txt_green text-start mb-0 lh-base">per <br>
+                  bottle</p>
+              </div>
+              <p class="mb-0 text-center txt_blue fw-semibold txt_blue2">+3 FREE EBOOKS </p>
+              <hr class="opacity-100 border_c_blue border-1 mb-0">
+            </div>
+            <div class="px-3 py-3" style="background-color: #f8f6f1;">
+              <h3 class="mb-2 txt_blue2 fw-semibold">Total: $207</h3>
+                <a href="https://phytomem.pay.clickbank.net/?cbitems=2&amp;template=ac2nnn&amp;exitoffer=ext1&amp;cbfid=63627&amp;vtid=v2&amp;vtid=v2&amp;item=2" class="pricing_btn pricing_btn_primary mb-3 fs_18"><img width="30" class="me-2" src="images/cart.svg" alt=""> Buy Now</a>
+                <img class="img-fluid" src="images/payment-methods.png" alt="">
+                <h6 class="lh-base mt-3 mb-0 txt_blue2">
+                 + Free US Shipping
+                </h6>
+                <p class="mb-0 txt_blue opacity-50 fw-semibold">Savings: $272</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <div class="py-3"></div>
+
+       <section class="py-4 pb-5 bg_blue_gradient position-relative">
+      <div id="nav-1" class="branding_p_nav"></div>
+      <div class="container-lg px-4">
+        <div class="col-lg-11 mx-auto">
+          <h2 class="text-center text-white fw-light mb-4 f_LibreBaskerville">Discover the Phytomem One Difference</h2>
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="text-white fs_18">
+                <img src="images/intro-img-1.jpg" class="w-100 d-block mb-3" alt="">
+                <h5 class="fs_18 fw-bold mb-3">A Complete Brain Support System Rooted in Dual-Defense Science</h5>
+                <p>Phytomem One combines premium neuro-support nutrients with powerful metabolic-targeting ingredients to help you maintain sharp, vibrant memory at any age.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="text-white fs_18">
+                <img src="images/intro-img-2.jpg" class="w-100 d-block mb-3" alt="">
+                <h5 class="fs_18 fw-bold mb-3">Inspired by Breakthrough Research</h5>
+                <p>Our formula is based on the latest discoveries in the microplastic-brain connection - designed to help neutralize the Plastic Stranglehold and restore your brain's ability to fuel itself from within.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="text-white fs_18">
+                <img src="images/intro-img-3.jpg" class="w-100 d-block mb-3" alt="">
+                <h5 class="fs_18 fw-bold mb-3">Complete Brain Support</h5>
+                <p>This all-in-one supplement delivers 10 powerful ingredients that support your neurons, neural pathways, and cognitive function - while helping restore the insulin sensitivity that defends your brain from hidden metabolic damage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+        
+<section class="py-5 position-relative">
+    <div id="nav-3" class="branding_p_nav"></div>
+    <div class="container-lg px-4">
+      <div class="col-lg-11 mx-auto">
+        <h2 class="text-center txt_blue fw-bold mb-4 f_LibreBaskerville">It’s YOUR Time To Be The Next Success Story!</h2>
+        <div class="review_slider pt-1">
+          <div class="row justify-content-center gy-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="p-4 bg_light_gray rounded-4 h-100 d-flex flex-column align-items-center">
+                <div class="review_slider_img">
+                  <img src="images/success-story-img.png" alt="">
+                </div>
+                <h5 class="fw-bold mb-1">Robert T.</h5>
+                <p class="fw-light fs_18 mb-0">Texas</p>
+                <div class="mb-2">
+                  <img width="110" src="images/stars-icon.png" alt="">
+                </div>
+                <p class="mb-0">
+                  "Phytomem One is unlike anything I have tried. My thinking feels clearer, and my recall is noticeably sharper!"
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="p-4 bg_light_gray rounded-4 h-100 d-flex flex-column align-items-center">
+                <div class="review_slider_img">
+                  <img src="images/lindam_testimonial.png" alt="">
+                </div>
+                <h5 class="fw-bold mb-1">Melissa M.</h5>
+                <p class="fw-light fs_18 mb-0">Ohio</p>
+                <div class="mb-2">
+                  <img width="110" src="images/stars-icon.png" alt="">
+                </div>
+                <p class="mb-0">
+                  "For the first time in years, I can follow conversations without that awful blank stare. I feel more confident!"
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="p-4 bg_light_gray rounded-4 h-100 d-flex flex-column align-items-center">
+                <div class="review_slider_img">
+                  <img src="images/patriciar_testimonial.png" alt="">
+                </div>
+                <h5 class="fw-bold mb-1">Elizabeth R.</h5>
+                <p class="fw-light fs_18 mb-0">Florida</p>
+                <div class="mb-2">
+                  <img width="110" src="images/stars-icon.png" alt="">
+                </div>
+                <p class="mb-0">
+                  "I was not expecting such a difference, but my brain fog is almost gone and I can finally read without losing my place."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-5 bg_blue_gradient">
+    <div class="container-lg px-4 position-relative z-2">
+      <h2 class="text-center fw-bold lh-base text-white mb-3 f_LibreBaskerville">
+        SPECIAL BONUS PACKAGE: <br>
+VALUE OVER <span class="txt_green">$200</span> - YOURS <span class="txt_green">FREE</span> TODAY!
+      </h2>
+
+      <p class="fs_18 mb-5 fw-light text-white text-center">
+        Support your results and restore mental clarity faster with these exclusive guides:
+      </p>
+
+      <div class="row justify-content-center g-5 mb-4">
+        <div class="col-md-6">
+          <div class="txt_blue bg-white h-100 rounded-5 p-4 d-flex flex-column">
+          
+          <div class="row g-sm-4 g-0 m-0 align-items-center col-12 my-auto">
+            <div class="col-12 d-sm-none d-block">
+              <div class="bg_green border_golden text-white py-2 px-3 rounded-12 h5 mb-4 d-flex justify-content-between shadow_sm">
+                  <del class="fw-semibold">$97</del> <span>Yours FREE</span>
+              </div>
+            </div>
+            <div class="col-sm-5 p-3 col-8 mx-auto text-center mt-md-0">
+              <img src="images/special-bonus-book-1.png" class="w-100" alt="">
+            </div>
+            <div class="col-sm-7 mt-md-0">
+                <div class="d-sm-flex d-none bg_green border_golden text-white py-2 px-3 rounded-12 h5 mb-3 d-flex justify-content-between shadow_sm">
+                  <del class="fw-semibold">$97</del> <span>Yours FREE</span>
+                </div>
+                <h4 class="fw_800 mb-2">BONUS #1: The Memory Shield Diet</h4>
+                <p class="mb-0 h5 fw-normal">The exact foods that protect your brain from microplastic damage and the ones silently accelerating the Stranglehold - developed by Dr. Nakamura himself.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="txt_blue bg-white h-100 rounded-5 p-4 d-flex flex-column">
+          
+            <div class="row g-sm-4 g-0 m-0 align-items-center col-12 my-auto">
+            <div class="col-12 d-sm-none d-block">
+              <div class="bg_green border_golden text-white py-2 px-3 rounded-12 h5 mb-4 d-flex justify-content-between shadow_sm">
+                  <del class="fw-semibold">$67</del> <span>Yours FREE</span>
+              </div>
+            </div>
+            <div class="col-sm-5 p-3 col-8 mx-auto text-center mt-md-0">
+              <img src="images/special-bonus-book-2.png" class="w-100" alt="">
+            </div>
+            <div class="col-sm-7 mt-md-0">
+                <div class="d-sm-flex d-none bg_green border_golden text-white py-2 px-3 rounded-12 h5 mb-3 d-flex justify-content-between shadow_sm">
+                  <del class="fw-semibold">$67</del> <span>Yours FREE</span>
+                </div>
+                <h4 class="fw_800 mb-2">BONUS #2: The 5-Minute Brain Reboot</h4>
+                <p class="mb-0 h5 fw-normal">A daily morning routine that awakens dormant neurons and speeds cognitive recovery — the same method that restored a 64-year-old prosecutor’s legendary memory.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="txt_blue bg-white h-100 rounded-5 p-4 d-flex flex-column">            
+            <div class="row g-sm-4 g-0 m-0 align-items-center col-12 my-auto">
+            <div class="col-12 d-sm-none d-block">
+              <div class="bg_green border_golden text-white py-2 px-3 rounded-12 h5 mb-4 d-flex justify-content-between shadow_sm">
+                  <del class="fw-semibold">$50</del> <span>Yours FREE</span>
+              </div>
+            </div>
+            <div class="col-sm-5 p-3 col-8 mx-auto text-center mt-md-0">
+              <img src="images/special-bonus-book-3.png" class="w-100" alt="">
+            </div>
+            <div class="col-sm-7 mt-md-0">
+                <div class="d-sm-flex d-none bg_green border_golden text-white py-2 px-3 rounded-12 h5 mb-3 d-flex justify-content-between shadow_sm">
+                  <del class="fw-semibold">$50</del> <span>Yours FREE</span>
+                </div>
+                <h4 class="fw_800 mb-2">BONUS #3: The Caregiver's Survival Guide</h4>
+                <p class="mb-0 h5 fw-normal">A step-by-step roadmap for family members supporting a loved one through cognitive recovery - so the people around you know exactly how to help.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+       <section class="py-md-5 pb-5 pt-4">
+      <div class="container-lg px-4">
+        <div class="warning_box warning_sec text-center p-4 rounded-4 mb-5 col-lg-10 mx-auto">
+          <img src="images/warning-icon.svg" alt="">
+          <h2 class="mb-3 fw-bold h1">EXCLUSIVE ONLINE OFFER</h2>
+            <p class="fs_18 mb-0">
+              <strong>Phytomem One</strong> is <span class="txt_red fw-bold">ONLY</span> available on this page. <br>
+              You won't find it in stores or on third-party sites. <br>
+Supplies are limited - <span class="txt_red fw-bold">and this offer may not return.</span>
+            </p>
+        </div>
+
+        <div class="bg_blue2 rounded-5 p-4">
+          <div class="row align-items-center text-md-start text-center">
+            <div class="col-lg-2 col-md-3 col-sm-6 col-7 mx-lg-0 mx-auto mb-md-0 mb-3">
+              <img src="images/satisfaction_guarantee_img.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-9 me-auto ps-md-4 text-white">
+              <h2 class="fw-bold text-light">No risk, 60-Day Money Back Guarantee</h2>
+              <p class="h5 fw-normal me-lg-5 lh-base mb-0">
+                Try Phytomem One for 60 days. If you're not completely satisfied, just return the bottles and we'll refund your purchase. 
+Simple and hassle-free.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="pt-4 pb-5 bg_royalblue">
+      <div class="container-lg px-4">
+
+        <div class="col-lg-11 mx-auto">
+          <div class="p-sm-4 p-3 rounded-5 bg-white">
+            <div class="mb-3">
+              <img class="w-100" src="images/badges.svg" alt="">
+            </div>
+            <p class="text-center txt_blue mb-0">All ingredients are carefully handled according to the USDA National
+              Organic Program in a certified facility.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <div class="py-3"></div>
+
+        <section>
+            <span id="action"></span>
+            
+  <section class="py-5 mb-3 sec_pricing position-relative">
+    <div id="nav-4" class="branding_p_nav"></div>
+    <div class="container-lg px-4 pt-md-4 pt-3">
+      <div class="pricing_table d_900_flex">
+        <div class="basic_pack">
+          <div class="border border_c_blue rounded-5 text-center oveflow-hidden">
+            <div class="px-3 w-100 border-bottom border_c_blue py-3 header">
+              <h3 class="text-white mb-0 fw-bold f_LibreBaskerville">STARTER</h3>
+            </div>
+            <div class="w-100 pt-3" style="background-color: #f8f6f1;">
+              <p class="txt_blue mb-0 text-uppercase">2 Bottles</p>
+              <img class="product_img1 mb-5" src="images/starter-product.png" alt="">
+              <div class="d-flex align-items-center justify-content-center gap-2">
+                <h4 class="text-secondary opacity-50 fw-normal mb-0 text-decoration-line-through">$99</h4>
+                <h2 class="txt_green fw_800 mb-0 h1">$79</h2>
+                <p class="txt_green text-start mb-0 lh-base">per <br>
+                  bottle</p>
+              </div>
+              <p class="mb-0 opacity-0">+3 FREE EBOOKS </p>
+              <hr class="opacity-100 border_c_blue border-1 mb-0">
+            </div>
+            <div class="px-3 py-3" style="background-color: #f8f6f1;">
+              <h3 class="mb-2 txt_blue2 fw-semibold">Total: $158</h3>
+                <a href="https://phytomem.pay.clickbank.net/?cbitems=1&amp;template=ac1nn&amp;exitoffer=ext1&amp;cbfid=63626&amp;vtid=v2&amp;vtid=v2&amp;item=1" class="pricing_btn pricing_btn_primary mb-3 fs_18"><img width="30" class="me-2" src="images/cart.svg" alt=""> Buy Now</a>
+                <img class="img-fluid" src="images/payment-methods.png" alt="">
+                <h6 class="lh-base mt-3 mb-0 txt_blue2">
+                  &nbsp;+ small shipping fee
+                </h6>
+                <p class="mb-0 txt_blue opacity-50 fw-bold">Savings: $40</p>
+            </div>
+          </div>
+        </div>
+        <div class="gold_pack">
+          <div class="border border_c_blue rounded-5 text-center oveflow-hidden">
+            <div class="px-3 w-100 border-bottom border_c_blue bg_blue_light header py-3">
+              <h3 class="mb-0 fw-bold text-white f_LibreBaskerville">ULTIMATE</h3>
+            </div>
+            <div class="w-100 pt-3" style="background-color: #f8f6f1;">
+              <p class="txt_blue mb-2 text-uppercase">6 Bottles</p>
+              <img class="product_img1 mb-4" src="images/ultimate-product.png" alt="">
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                <h4 class="text-secondary opacity-50 fw-normal mb-0 text-decoration-line-through">$99</h4>
+                <h2 class="txt_green fw_800 mb-0 h1">$49</h2>
+                <p class="txt_green text-start mb-0 lh-base">per <br>
+                  bottle</p>
+              </div>
+              <p class="mb-0 text-center txt_blue2 fw-semibold">+3 FREE EBOOKS </p>
+              <hr class="opacity-100 border_c_blue border-1 mb-0">
+            </div>
+            <div class="px-3 pt-4 pb-3 bg_blue_gradient">
+              <h3 class="mb-2 text-white fw-semibold">Total: $294</h3>
+                <a href="https://phytomem.pay.clickbank.net/?cbitems=3&amp;template=ac3nn&amp;exitoffer=ext1&amp;cbfid=63628&amp;vtid=v2&amp;vtid=v2&amp;item=3" class="pricing_btn pricing_btn_primary pricing_btn_yellow mb-3 fs_18"><img width="30" class="me-2" src="images/cart.svg" alt=""> Buy Now</a>
+                <img class="img-fluid" src="images/payment-methods.png" alt="">
+                <h6 class="lh-base mt-3 mb-0 text-white">
+                  + Free US Shipping
+                </h6>
+                <p class="mb-0 txt_blue4 fw-semibold">Savings: $434</p>
+            </div>
+          </div>
+        </div>
+        <div class="silver_pack">
+          <div class="border border_c_blue rounded-5 text-center oveflow-hidden">
+            <div class="px-3 w-100 border-bottom border_c_blue header py-3">
+              <h3 class="text-white mb-0 fw-bold f_LibreBaskerville">ADVANCED</h3>
+            </div>
+            <div class="w-100 pt-3" style="background-color: #f8f6f1;">
+              <p class="txt_blue mb-0 text-uppercase">3 Bottles</p>
+                <img class="product_img1 mb-3" src="images/advanced-product.png" alt="">
+              <div class="d-flex align-items-center justify-content-center gap-2">
+                <h4 class="text-secondary opacity-50 fw-normal mb-0 text-decoration-line-through">$99</h4>
+                <h2 class="txt_green fw_800 mb-0 h1">$69</h2>
+                <p class="txt_green text-start mb-0 lh-base">per <br>
+                  bottle</p>
+              </div>
+              <p class="mb-0 text-center txt_blue fw-semibold txt_blue2">+3 FREE EBOOKS </p>
+              <hr class="opacity-100 border_c_blue border-1 mb-0">
+            </div>
+            <div class="px-3 py-3" style="background-color: #f8f6f1;">
+              <h3 class="mb-2 txt_blue2 fw-semibold">Total: $207</h3>
+                <a href="https://phytomem.pay.clickbank.net/?cbitems=2&amp;template=ac2nnn&amp;exitoffer=ext1&amp;cbfid=63627&amp;vtid=v2&amp;vtid=v2&amp;item=2" class="pricing_btn pricing_btn_primary mb-3 fs_18"><img width="30" class="me-2" src="images/cart.svg" alt=""> Buy Now</a>
+                <img class="img-fluid" src="images/payment-methods.png" alt="">
+                <h6 class="lh-base mt-3 mb-0 txt_blue2">
+                 + Free US Shipping
+                </h6>
+                <p class="mb-0 txt_blue opacity-50 fw-semibold">Savings: $272</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        </section>
+    </section><!-- END action_area -->
+
+    <section>
+        <div class="py-5"></div>
+        <div class="py-5"></div>
+        <div class="py-5"></div>
+        <div class="py-5"></div>
+        <div class="py-5"></div>
+    </section>
+
+    <section>
+        <script defer="" type="text/javascript" src="js/videoPlayer-v2.js"></script>
+
+        <script type="text/javascript" src="js/bubble_social.js"></script>
+    </section>
+
+    <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_1wB6MIuMDwIr9klVEEw10ZXM7nhGIdne5D17jggnIvL', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2025-05-24',
+        person_profiles: 'identified_only',
+    })
+</script>
+    
+    <section>
+        <footer>
+
+<footer class="py-4" style="background-color: #E0EBFE;">
+  <div class="container-lg px-4">
+    <div class="border border_c_blue rounded-4 p-lg-5 p-sm-4 p-3">
+      <div class="row justify-content-center mb-sm-3 mb-1">
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../contact/" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Contact</a>
+        </div>
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../help/terms.php" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Terms</a>
+        </div>
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../help/privacy.php" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Privacy</a>
+        </div>
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../help/references.php" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">References</a>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../help/refunds.php" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Return Policy</a>
+        </div>
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../help/shipping.php" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Shipping Policy</a>
+        </div>
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="../help/disclaimer.php" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Disclaimer</a>
+        </div>
+        <div class="col-sm-3 mb-sm-0 mb-2 px-2">
+          <a href="https://www.redwindowrock.com/o-jlfr-j63-06c48ebf33160ccd043a8bbd3f74d911" target="_blank" class="btn_primary w-100 txt_blue text-center d-block">Unsubscribe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-4"></div>
+
+    <p class="fs_14 txt_blue">Please note that the information we provide is not intended to replace consultation with a qualified medical professional. We encourage you to inform your physician of changes you make to your lifestyle and discuss these with him or her. For questions or concerns about any medical conditions you may have, please contact your doctor.</p>
+
+    <p class="fs_14 txt_blue">Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease. If you are pregnant, nursing, taking medication, or have a medical condition, consult your physician before using our products.</p>
+
+    <p class="fs_14 txt_blue">Names and personal identifying information on this site has been changed to protect the privacy of individuals.</p>
+
+    <p class="fs_14 txt_blue">The website's content and the product for sale is based upon the author's opinion and is provided solely on an "AS IS" and "AS AVAILABLE" basis. You should do your own research and confirm the information with other sources when searching for information regarding health issues and always review the information carefully with your professional health care provider before using any of the protocols presented on this website and/or in the product sold here.</p>
+
+          <p class="fs_14 txt_blue">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.</p>
+      
+    <p class="fs_14 txt_blue">Results May Vary: the results testimonials are in no way a guarantee of results. Individual results, including amount and time, will vary. No individual result should be seen as typical.</p>
+
+    <p class="fs_14 txt_blue">Visuals shown in the video are intended to support the presentation experience and may feature recreated or AI-assisted representations. They are not necessarily depictions of real individuals, customers, or medical professionals unless clearly identified as such.</p>
+
+    <div class="col-12">
+      <div class="py-3"></div>
+            <span id="disclaimer"></span>
+    </div>
+
+    <div class="position-relative overflow-hidden pt-3 copyright-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="copyright text-center txt_blue">© 2026 · Copyright: <a href="getphytomemone.com" class="txt_blue">Phytomem One</a> · All rights reserved</p>
+            <hr class="border_c_blue">
+            <img class="img-fluid mx-auto d-block pay-options lazyload mb-3" data-src="images/pay-options.png" alt="Payment Options">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<!-- Lazyload script for images -->
+
+
+<section id="footer-scripts">
+	<script type="text/javascript" src="js/lazysizes.min.js"></script>
+	<script src="js/jquery-3.5.1.slim.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</section>
+
+<script src="//cbtb.clickbank.net/?vendor=phytomem"></script>
+
+
+
+</footer>
+    </section>
+<script>
+(function(){
+  var qs=window.location.search.slice(1);
+  if(qs){
+    document.querySelectorAll('a[href*="clickbank.net"]').forEach(function(a){
+      a.href+=(a.href.indexOf('?')>=0?'&':'?')+qs;
+    });
+  }
+  document.querySelectorAll('a[href*="pay.clickbank.net"]').forEach(function(a){try{var u=new URL(a.href);var cb=u.searchParams.get('cbitems');if(cb&&!u.searchParams.get('item')){u.searchParams.set('item',cb);a.href=u.toString();}}catch(e){}});
+})();
+</script>
+
+</body></html>
