@@ -169,6 +169,48 @@ footer p { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .sticky { transition: none; } }
 </style>
+<style>
+  :root { --background: #15161a; --red: #bc382b; --red-hover: #9f2c22; }
+  body { overflow-x: clip; }
+  .headline { font-size: clamp(3.6rem, 9vw, 7.5rem); line-height: .99; }
+  .headline span { font-size: .73em; color: var(--text); }
+  .product-hero { min-height: clamp(30rem, 55vw, 41rem); }
+  .product-photo img { max-height: 32rem; }
+  .product-photo::before { inset: 23% 0 0; max-width: 97%; }
+  .fact-strip { border: 0; background: #bd382c; }
+  .fact-strip li, .fact-strip strong { color: #fff; }
+  .fact-strip li + li { border-color: #e58277; }
+  .light-band { color: #17181c; background: #fcfcfd; box-shadow: 0 0 0 100vmax #fcfcfd; clip-path: inset(0 -100vmax); border-color: #e1e1e5; }
+  .light-band > p, .light-band .faq details p, .light-band details p { color: #41434b; }
+  .light-band a { color: #9a2d24; }
+  .light-band .sales-card, .light-band .guarantee-panel { background: #f2f2f5; border-color: #dedee5; }
+  .light-band .sales-card dd { color: #4d4e58; }
+  .light-band .guarantee-panel { border-left-color: var(--red); }
+  .light-band .faq details, .light-band.faq details { border-color: #dcdce3; }
+  .packages-intro { max-width: 58ch; }
+  .package-options { border: 0; margin: 2rem 0 0; padding: 0; min-width: 0; }
+  .package-options legend { padding: 0; margin-bottom: .65rem; color: var(--muted); font-size: .9rem; }
+  .package-options .sales-grid { margin: 0; gap: 1.05rem; }
+  .package-choice { display: flex; flex-direction: column; gap: .6rem; min-width: 0; }
+  .package-label { display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; position: relative; cursor: pointer; border-radius: 12px; padding: 1.15rem 1rem 1.35rem; border: 3px solid transparent; background: #fcfcfd; color: #17181c; }
+  .package-label:hover { border-color: #e69a8e; }
+  .package-label:has(input:checked) { border-color: var(--red); }
+  .package-label:focus-within { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .package-label input { position: absolute; top: 1rem; left: 1rem; width: 1.1rem; height: 1.1rem; accent-color: var(--red); }
+  .package-label img { width: 100%; height: clamp(10rem, 23vw, 17rem); object-fit: contain; }
+  .package-count { display: block; font: 800 clamp(1.8rem, 3.25vw, 2.6rem)/1 var(--headline); text-transform: uppercase; }
+  .package-caption { margin-top: .35rem; color: #4c4e57; font-size: .92rem; }
+  .package-offer .btn, .sales-close .btn { width: min(100%, 32.5rem); }
+  .package-offer .affiliate-note { max-width: 55ch; margin-inline: auto; }
+  .checkout-summary { font-size: .9rem; color: var(--muted); margin: .55rem 0 0; }
+  .package-fallback { display: block; text-align: center; }
+  .checkout-ready .package-fallback { display: none; }
+  .sales-close { background: var(--background); border: 0; margin: 0; padding-block: clamp(2.5rem, 7vw, 5rem); }
+  @media (max-width: 680px) {
+    .product-hero { min-height: auto; }
+    .package-label img { height: 13rem; }
+  }
+</style>
 </head>
 <body>
 <div class="disclosure">Affiliate page · We may earn a commission from purchases through this page.</div>
@@ -187,7 +229,7 @@ footer p { margin: 0; }
 <main id="product">
   <section class="product-hero" aria-labelledby="product-title">
     <div>
-      <h1 class="headline" id="product-title">SodaPeak<span>Gummy supplement</span></h1>
+      <h1 class="headline" id="product-title">SodaPeak<span>Daily gummies</span></h1>
       <p class="dek">Compare bottle packages, review the ingredients and check the seller’s guarantee before choosing an order.</p>
       <a class="btn" href="#packages">Choose your package</a>
       <p class="hero-detail">2, 3 or 6 bottles. Seller’s advertised 60-day guarantee. Terms apply.</p>
@@ -213,7 +255,7 @@ footer p { margin: 0; }
     </div>
   </section>
 
-  <section class="pitch sales-section" id="ingredients" aria-labelledby="ingredients-title">
+  <section class="sales-section light-band" id="ingredients" aria-labelledby="ingredients-title">
     <h2 id="ingredients-title">Ingredients to check on the label</h2>
     <p>This reference list differs from the seller’s public product description. Check the current Supplement Facts panel for the formula, amounts and other ingredients in the package you plan to order.</p>
     <dl class="ingredient-grid">
@@ -236,35 +278,49 @@ footer p { margin: 0; }
     </ol>
   </section>
 
-  <section class="pitch sales-section" id="packages" aria-labelledby="packages-title">
-    <h2 id="packages-title">Choose a bottle package</h2>
-    <div class="sales-grid">
-      <div class="sales-card">
-        <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-2-frascos.png" alt="2 SodaPeak bottles" loading="lazy" decoding="async">
-        <h3>2 bottles</h3>
-        <p class="package-description">Smallest listed package</p>
-        <p>Choose fewer bottles if you prefer a smaller initial order.</p>
+  <section class="sales-section" id="packages" aria-labelledby="packages-title">
+    <h2 id="packages-title">Choose your package</h2>
+    <p class="packages-intro">Pick the number of bottles, then review the current price and shipping at checkout.</p>
+    <fieldset class="package-options">
+      <legend>Number of bottles</legend>
+      <div class="sales-grid">
+        <div class="package-choice">
+          <label class="package-label">
+            <input type="radio" name="sodapeak-package" value="6" checked>
+            <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-6-frascos-1024x1024.png" alt="" loading="lazy" decoding="async">
+            <span class="package-count">6 bottles</span>
+            <span class="package-caption">Largest kit</span>
+          </label>
+          <a class="package-fallback" data-package-checkout="6" href="https://buygoods.com/secure/checkout.html?account_id=13326&amp;product_codename=PP_SPK6UNITS_AFF&amp;redirect=aHR0cHM6Ly9pbXByb3ZpbmdvdXJoZWFsdGguY29tL3Nway1hZmYtYnV5LXVwMS8%3D&amp;aff_id=1858&amp;pe_vid=5567a900-2bad-4c81-a21a-2289dde5c57d&amp;subid5=5567a9002bad4c81a21a2289dde5c57d" rel="sponsored">Checkout for 6 bottles</a>
+        </div>
+        <div class="package-choice">
+          <label class="package-label">
+            <input type="radio" name="sodapeak-package" value="3">
+            <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-3-frascos-1024x1024.png" alt="" loading="lazy" decoding="async">
+            <span class="package-count">3 bottles</span>
+            <span class="package-caption">Mid-size kit</span>
+          </label>
+          <a class="package-fallback" data-package-checkout="3" href="https://buygoods.com/secure/checkout.html?account_id=13326&amp;product_codename=PP_SPK3UNITS_AFF&amp;redirect=aHR0cHM6Ly9pbXByb3ZpbmdvdXJoZWFsdGguY29tL3Nway1hZmYtYnV5LXVwMS8%3D&amp;aff_id=1858&amp;pe_vid=5567a900-2bad-4c81-a21a-2289dde5c57d&amp;subid5=5567a9002bad4c81a21a2289dde5c57d" rel="sponsored">Checkout for 3 bottles</a>
+        </div>
+        <div class="package-choice">
+          <label class="package-label">
+            <input type="radio" name="sodapeak-package" value="2">
+            <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-2-frascos.png" alt="" loading="lazy" decoding="async">
+            <span class="package-count">2 bottles</span>
+            <span class="package-caption">Smallest kit</span>
+          </label>
+          <a class="package-fallback" data-package-checkout="2" href="https://buygoods.com/secure/checkout.html?account_id=13326&amp;product_codename=PP_SPK2UNITS_AFF&amp;redirect=aHR0cHM6Ly9pbXByb3ZpbmdvdXJoZWFsdGguY29tL3Nway1hZmYtYnV5LXVwMS8%3D&amp;aff_id=1858&amp;pe_vid=5567a900-2bad-4c81-a21a-2289dde5c57d&amp;subid5=5567a9002bad4c81a21a2289dde5c57d" rel="sponsored">Checkout for 2 bottles</a>
+        </div>
       </div>
-      <div class="sales-card">
-        <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-3-frascos-1024x1024.png" alt="3 SodaPeak bottles" loading="lazy" decoding="async">
-        <h3>3 bottles</h3>
-        <p class="package-description">Mid-size package</p>
-        <p>Compare the total and per-bottle price with the other options.</p>
-      </div>
-      <div class="sales-card">
-        <img src="https://sodapeak.com/wp-content/uploads/2026/08/sodapeak-6-frascos-1024x1024.png" alt="6 SodaPeak bottles" loading="lazy" decoding="async">
-        <h3>6 bottles</h3>
-        <p class="package-description">Largest listed package</p>
-        <p>Review the total order cost before choosing the largest quantity.</p>
-      </div>
-    </div>
-    <div class="offer-cta">
-      <a class="btn cta-out" href="https://sodapeak.com/spk-aff-buy-dtc/?aff_id=1858" rel="sponsored" aria-describedby="affiliate-packages">View packages on the seller’s site</a>
-      <p class="affiliate-note" id="affiliate-packages">Select your package with the seller. We may earn a commission from purchases through this link.</p>
+    </fieldset>
+    <div class="offer-cta package-offer">
+      <a class="btn" data-selected-checkout href="https://buygoods.com/secure/checkout.html?account_id=13326&amp;product_codename=PP_SPK6UNITS_AFF&amp;redirect=aHR0cHM6Ly9pbXByb3ZpbmdvdXJoZWFsdGguY29tL3Nway1hZmYtYnV5LXVwMS8%3D&amp;aff_id=1858&amp;pe_vid=5567a900-2bad-4c81-a21a-2289dde5c57d&amp;subid5=5567a9002bad4c81a21a2289dde5c57d" rel="sponsored" aria-describedby="affiliate-packages">Order 6 bottles</a>
+      <p class="checkout-summary" id="checkout-summary" role="status">Selected package: 6 bottles.</p>
+      <p class="affiliate-note" id="affiliate-packages">BuyGoods checkout. We may earn a commission from purchases through this link.</p>
     </div>
   </section>
 
-  <section class="sales-section" id="guarantee" aria-labelledby="guarantee-title">
+  <section class="sales-section light-band" id="guarantee" aria-labelledby="guarantee-title">
     <div class="guarantee-panel">
       <h2 id="guarantee-title">Seller’s 60-day guarantee</h2>
     <p>The seller’s public offer advertises a 60-day refund guarantee and directs customers to contact support after at least 30 days of use. Check the terms that apply to your order, including the claim deadline, eligibility and return instructions.</p>
@@ -272,7 +328,7 @@ footer p { margin: 0; }
     </div>
   </section>
 
-  <section class="faq sales-section" id="faq" aria-labelledby="order-title">
+  <section class="faq sales-section light-band" id="faq" aria-labelledby="order-title">
     <h2 id="order-title">Frequently asked questions</h2>
     <details><summary>What is SodaPeak?</summary><p>The seller describes it as a dietary supplement in gummy form. The product label gives its serving directions and complete ingredient information.</p></details>
     <details><summary>Where can I confirm the ingredients?</summary><p>Check the Supplement Facts panel for the exact product and package being offered. The ingredient list above is a reference for that comparison.</p></details>
@@ -283,10 +339,10 @@ footer p { margin: 0; }
   </section>
 
   <section class="sales-close" aria-labelledby="close-title">
-    <h2 id="close-title">Choose your SodaPeak package</h2>
+    <h2 id="close-title">6 bottles of SodaPeak</h2>
     <p>Review package availability, pricing and the full terms with the seller.</p>
-    <a class="btn cta-out" href="https://sodapeak.com/spk-aff-buy-dtc/?aff_id=1858" rel="sponsored" aria-describedby="affiliate-bottom">See the current SodaPeak offer</a>
-    <p class="affiliate-note" id="affiliate-bottom">Affiliate link to sodapeak.com. We may earn a commission from purchases.</p>
+    <a class="btn" data-selected-checkout href="https://buygoods.com/secure/checkout.html?account_id=13326&amp;product_codename=PP_SPK6UNITS_AFF&amp;redirect=aHR0cHM6Ly9pbXByb3ZpbmdvdXJoZWFsdGguY29tL3Nway1hZmYtYnV5LXVwMS8%3D&amp;aff_id=1858&amp;pe_vid=5567a900-2bad-4c81-a21a-2289dde5c57d&amp;subid5=5567a9002bad4c81a21a2289dde5c57d" rel="sponsored" aria-describedby="affiliate-bottom">Order 6 bottles</a>
+    <p class="affiliate-note" id="affiliate-bottom">BuyGoods checkout. We may earn a commission from purchases through this link.</p>
   </section>
 </main>
 <footer>
@@ -295,7 +351,7 @@ footer p { margin: 0; }
   </div>
 </footer>
 <div class="sticky" id="sticky" aria-hidden="true">
-  <a class="btn cta-out" href="https://sodapeak.com/spk-aff-buy-dtc/?aff_id=1858" rel="sponsored" tabindex="-1">See the SodaPeak offer</a>
+  <a class="btn" href="#packages" tabindex="-1">See packages</a>
 </div>
 
 <script>
@@ -320,6 +376,34 @@ footer p { margin: 0; }
     sticky.querySelector('a').tabIndex = show?0:-1;
   }
   window.addEventListener('scroll', update, {passive:true});
+})();
+</script>
+<script>
+(() => {
+  const options = document.querySelector('.package-options');
+  const buttons = document.querySelectorAll('[data-selected-checkout]');
+  const status = document.getElementById('checkout-summary');
+  const title = document.getElementById('close-title');
+
+  function updateCheckout() {
+    const selected = options.querySelector('input[name="sodapeak-package"]:checked');
+    if (!selected) return;
+
+    const packageLink = options.querySelector('[data-package-checkout="' + selected.value + '"]');
+    if (!packageLink) return;
+
+    buttons.forEach(button => {
+      button.href = packageLink.href;
+      button.textContent = 'Order ' + selected.value + ' bottles';
+    });
+    status.textContent = 'Selected package: ' + selected.value + ' bottles.';
+    title.textContent = selected.value + ' bottles of SodaPeak';
+  }
+
+  options.addEventListener('change', updateCheckout);
+  window.addEventListener('pageshow', updateCheckout);
+  updateCheckout();
+  document.documentElement.classList.add('checkout-ready');
 })();
 </script>
 </body>
