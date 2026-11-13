@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men's Energy &amp; Wellness | Blog</title>
+<meta name="description" content="Simple habits for men who want more energy and drive in everyday life, and how honey can be part of that routine.">
+<link rel="canonical" href="https://purevitaly.site/honey/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://purevitaly.site/honey/">
+<meta property="og:title" content="More energy every day: simple habits that make a difference">
+<meta property="og:description" content="Simple habits for men who want more energy and drive in everyday life, and how honey can be part of that routine.">
+<meta property="og:image" content="https://purevitaly.site/honey/images%20(10).jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fundo:#faf6ee;
+    --fundo-2:#f1e7d3;
+    --mel:#d9982e;
+    --mel-escuro:#a8701a;
+    --carvao:#2f2a25;
+    --texto:#433a31;
+    --texto-suave:#76695b;
+    --verde:#6f8a63;
+    --branco:#fffdf9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito',sans-serif;background:var(--fundo);color:var(--texto);line-height:1.8;font-size:17px}
+  img{max-width:100%;display:block}
+  .container{max-width:760px;margin:0 auto;padding:0 20px}
+
+  header{background:var(--carvao);padding:18px 0}
+  .topo{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .logo{font-family:'Lora',serif;font-size:1.3rem;color:#f4d79a;text-decoration:none;display:flex;align-items:center;gap:10px}
+  nav a{color:#d9cfc2;text-decoration:none;margin-left:20px;font-size:.93rem}
+  nav a:first-child{margin-left:0}
+  nav a:hover{color:#f4d79a}
+
+  .hero{text-align:center;padding:60px 20px 40px}
+  .categoria{display:inline-block;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--verde);font-weight:700;margin-bottom:14px}
+  .hero h1{font-family:'Lora',serif;font-weight:600;color:var(--carvao);font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.25;margin-bottom:16px}
+  .hero p{color:var(--texto-suave);font-size:1.08rem;max-width:580px;margin:0 auto 18px}
+  .meta{font-size:.88rem;color:var(--texto-suave)}
+
+  /* Photos: replace src with your own images (landscape, ~1200x700) */
+  .foto{border-radius:20px;overflow:hidden;margin:30px 0;background:linear-gradient(135deg,#e9c27a,#a8701a);aspect-ratio:16/9;position:relative}
+  .foto img{width:100%;height:100%;object-fit:cover}
+  .foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;font-size:.85rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+  .foto-hero{max-width:900px;margin:0 auto;padding:0 20px}
+
+  article{padding:20px 0 30px}
+  article h2{font-family:'Lora',serif;font-weight:600;color:var(--carvao);font-size:1.6rem;margin:46px 0 14px;line-height:1.35}
+  article p{margin-bottom:20px}
+  .abertura::first-letter{font-family:'Lora',serif;float:left;font-size:3.6rem;line-height:1;padding:6px 10px 0 0;color:var(--mel)}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:26px 0 10px}
+  .card{background:var(--branco);border-radius:18px;padding:24px 22px;box-shadow:0 6px 24px rgba(47,42,37,.06);border:1px solid rgba(217,152,46,.18);transition:transform .4s,box-shadow .4s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(47,42,37,.1)}
+  .card .icone{font-size:1.7rem;margin-bottom:8px}
+  .card h3{font-family:'Lora',serif;color:var(--carvao);font-size:1.1rem;margin-bottom:6px}
+  .card p{font-size:.95rem;color:var(--texto-suave);margin:0;line-height:1.65}
+
+  .citacao{font-family:'Lora',serif;font-style:italic;font-size:1.3rem;color:var(--mel-escuro);text-align:center;padding:34px 20px;margin:40px 0;border-top:1px solid rgba(168,112,26,.25);border-bottom:1px solid rgba(168,112,26,.25)}
+
+  .rotina{background:var(--fundo-2);border-radius:22px;padding:32px 28px;margin:40px 0}
+  .rotina h2{margin-top:0}
+  .rotina ol{list-style:none;counter-reset:p}
+  .rotina li{counter-increment:p;position:relative;padding-left:48px;margin-bottom:18px}
+  .rotina li::before{content:counter(p);position:absolute;left:0;top:2px;width:32px;height:32px;border-radius:50%;background:var(--carvao);color:#f4d79a;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+
+  .aviso{font-size:.92rem;color:var(--texto-suave);background:var(--branco);border-left:4px solid var(--verde);border-radius:0 12px 12px 0;padding:18px 22px;margin:34px 0}
+  .aviso strong{color:var(--texto)}
+
+  .autor{display:flex;align-items:center;gap:16px;margin:46px 0 20px;padding-top:28px;border-top:1px solid rgba(168,112,26,.2)}
+  .avatar{width:56px;height:56px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--mel),var(--mel-escuro));display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+  .autor p{margin:0;font-size:.92rem;color:var(--texto-suave);line-height:1.5}
+  .autor strong{color:var(--texto);display:block;font-family:'Lora',serif;font-size:1rem}
+
+  footer{text-align:center;padding:36px 20px;font-size:.86rem;color:#bfb3a5;background:var(--carvao);margin-top:40px}
+
+  .revelar{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
+  .revelar.visivel{opacity:1;transform:none}
+
+  @media (max-width:600px){
+    body{font-size:16px}
+    nav{width:100%}
+    nav a{margin:0 16px 0 0}
+    .rotina{padding:24px 18px}
+    .hero{padding:44px 16px 30px}
+  }
+  @media (prefers-reduced-motion:reduce){.revelar{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container topo">
+    <a href="#" class="logo">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6C32 6 12 30 12 42a20 20 0 0 0 40 0C52 30 32 6 32 6Z" fill="#d9982e"/></svg>
+      Balanced Man
+    </a>
+    <nav>
+      <a href="#energy">Energy</a>
+      <a href="#routine">Routine</a>
+      <a href="#care">Good to Know</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="categoria">Men's wellness</span>
+  <h1>More energy every day:<br>simple habits that make a difference</h1>
+  <p>Feeling your best doesn't come from magic formulas. It comes from small choices, repeated daily. Here's how honey can be a tasty part of that routine.</p>
+  <div class="meta">5 min read</div>
+</section>
+
+<div class="foto-hero">
+  <figure class="foto">
+    <img src="images%20(10).jpeg" alt="Honey dripping from a wooden honey dipper" onerror="this.style.display='none'">
+    <figcaption>A calm start to the day is a form of self-care too.</figcaption>
+  </figure>
+</div>
+
+<main class="container">
+  <article>
+
+    <p class="abertura revelar">Work, bills, family, traffic: for many men, daily life leaves little room for taking care of themselves. The effects build up slowly, showing up as fatigue, poor sleep and low motivation. The good news is that small changes in habits already go a long way, and some of them can even taste great.</p>
+
+    <p class="revelar">Honey is one of those simple allies. It won't work miracles, but it fits nicely into a more balanced routine, as a swap for refined sugar and as a natural source of energy.</p>
+
+    <h2 id="energy" class="revelar">What honey brings to the table</h2>
+
+    <div class="cards">
+      <div class="card revelar">
+        <div class="icone">⚡</div>
+        <h3>Natural energy</h3>
+        <p>Its natural sugars give you a quick boost, perfect before a workout or for that mid-afternoon slump.</p>
+      </div>
+      <div class="card revelar">
+        <div class="icone">🌿</div>
+        <h3>Antioxidants</h3>
+        <p>Honey contains compounds such as flavonoids that help your body deal with everyday wear and tear.</p>
+      </div>
+      <div class="card revelar">
+        <div class="icone">🍯</div>
+        <h3>A smarter swap</h3>
+        <p>Used in small amounts instead of refined sugar, it's a more natural way to sweeten your day.</p>
+      </div>
+      <div class="card revelar">
+        <div class="icone">🌙</div>
+        <h3>A wind-down ritual</h3>
+        <p>A warm cup of tea with honey at night helps build the habit of slowing down before bed.</p>
+      </div>
+    </div>
+
+    <figure class="foto revelar">
+      <img src="images%20(9).jpeg" alt="Jar of golden honey" onerror="this.style.display='none'">
+      <figcaption>Choose pure honey from a trusted source.</figcaption>
+    </figure>
+
+    <h2 class="revelar">Energy is a set of habits</h2>
+    <p class="revelar">No single food fixes fatigue on its own. What matters most for a man's energy and well-being is getting the basics right: sleeping well, moving your body, eating a balanced diet, drinking water and going easy on alcohol and tobacco. These habits support your heart and circulation, which play a role in so much of how the male body feels and functions.</p>
+    <p class="revelar">Once the basics are in place, honey becomes a small detail that makes the routine more enjoyable to stick with.</p>
+
+    <div class="citacao revelar">“Real energy is built every day, one habit at a time.”</div>
+
+    <section id="routine" class="rotina revelar">
+      <h2>A simple routine to get started</h2>
+      <ol>
+        <li><strong>Morning:</strong> a glass of water when you wake up and, if you like, warm water with lemon and a spoonful of honey.</li>
+        <li><strong>Before a workout:</strong> a banana with a drizzle of honey for energy without feeling heavy.</li>
+        <li><strong>During the day:</strong> 30 minutes of walking or any exercise you enjoy.</li>
+        <li><strong>Evening:</strong> chamomile tea with honey, screens off and a consistent bedtime.</li>
+      </ol>
+    </section>
+
+    <h2 id="care" class="revelar">Balance above all</h2>
+    <p class="revelar">Honey is still sugar, so moderation is key: one or two spoonfuls a day are enough to enjoy the flavor without overdoing it.</p>
+
+    <div class="aviso revelar">
+      <strong>Important:</strong> this content is for informational purposes only and is not a substitute for medical advice. If you experience persistent fatigue or any change in your health, talk to a doctor. People with diabetes or allergies should consult a healthcare professional before adding honey to their routine.
+    </div>
+
+    <p class="revelar">Taking care of yourself isn't a luxury, it's an investment. Start small, starting today.</p>
+
+    <div class="autor revelar">
+      <div class="avatar">🐝</div>
+      <p><strong>The Balanced Man Team</strong>Writing about simple habits for a life with more energy.</p>
+    </div>
+
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 Balanced Man · For informational purposes only. Not a substitute for medical advice.</p>
+</footer>
+
+<script>
+  (function(){
+    var itens=document.querySelectorAll('.revelar');
+    if(!('IntersectionObserver' in window)){itens.forEach(function(el){el.classList.add('visivel')});return;}
+    var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visivel');obs.unobserve(e.target);}})},{threshold:.12});
+    itens.forEach(function(el){obs.observe(el)});
+  })();
+</script>
+
+</body>
+</html>
